@@ -12,6 +12,8 @@ db.Employee.insertMany([
 ])
 
 
+Embedded Style 
+
 db.Employees.insert({_id:1,name:"Ravi",age:21,salary:120000,
 address:{city:"Bangalore",state:"Kar"}})
 
@@ -27,3 +29,34 @@ address:{city:"Bangalore",state:"Kar"},
 projects:[{pid:100,typeofproject:"web",tech:"Java"},{pid:101,typeofproject:"destkop",tech:"python"}]})
 
 db.Employees.find().pretty();
+
+
+Trainer1 
+PK
+_id	TName		tech 
+1	Ravi		Java 
+2	Ramesh		Python 
+db.Trainer1.find();
+db.Trainer.insert({_id:1,tname:"Ravi",tech:"Java"});
+db.Trainer.insert({_id:2,tname:"Ramesh",tech:"Python"});
+
+Student1	we will store only trainer id 
+PK 
+_id	SName		Age 	TID		or 	TrainerDetails 
+100	Reeta		21	1		{_id:1,tname:”Ravi”,”Java”}
+101	Meeta		22	1
+102	Veeta		23	2
+103	Leeta		23	[1,2]	
+db.Student1.find();
+db.Student1.insert({_id:100,sname:"Reeta",age:21,tid:db.Trainer.find()[0]._id});
+db.Student1.insert({_id:101,sname:"Meeta",age:22,tid:db.Trainer.find()[0]._id});
+db.Student1.insert({_id:102,sname:"Veeta",age:23,tid:db.Trainer.find()[1]._id})
+db.Student1.insert({_id:103,sname:"Leeta",age:23,tid:[db.Trainer.find()[0]._id,db.Trainer.find()[1]._id]});
+
+Student2  	we will store trainer details 
+db.Student2.insert({_id:100,sname:"Reeta",age:21,tdetails:db.Trainer.find()[0]});
+db.Student2.insert({_id:101,sname:"Meeta",age:22, tdetails:db.Trainer.find()[0] });
+db.Student2.insert({_id:102,sname:"Veeta",age:23, tdetails:db.Trainer.find()[1] })
+db.Student2.insert({_id:103,sname:"Leeta",age:23, tdetails:[db.Trainer.find()[0],db.Trainer.find()[1]]});
+
+
