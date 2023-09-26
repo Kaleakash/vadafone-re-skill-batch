@@ -1,0 +1,12 @@
+db.Employee.insertMany([
+{_id:1,name:"Ravi",age:21,salary:56000,city:"Bangalore",dept:100},
+{_id:2,name:"Steven",age:25,salary:58000,city:"Delhi",dept:101},
+{_id:3,name:"Raju",age:28,salary:52000,city:"Mumbai",dept:102},
+{_id:4,name:"Lex",age:23,salary:56000,city:"Bangalore",dept:100},
+{_id:5,name:"John",age:28,salary:76000,city:"Delhi",dept:101},
+{_id:6,name:"Rooma",age:31,salary:86000,city:"Mumbai",dept:100},
+{_id:7,name:"Raju",age:29,salary:96000,city:"Mumbai",dept:102},
+{_id:8,name:"Ajay",age:24,salary:55000,city:"Delhi",dept:101},
+{_id:9,name:"Vijay",age:29,salary:44000,city:"Bangalore",dept:100},
+{_id:10,name:"Balaji",age:22,salary:32000,city:"Mumbai",dept:102}
+])
