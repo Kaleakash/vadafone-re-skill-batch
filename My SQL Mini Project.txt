@@ -1,5 +1,7 @@
 create database insurancedb;
+
 use insurancedb
+
 create table address_details(address_id int primary key,h_no varchar(6),city varchar(50),addressline1 varchar(50),state varchar(50),pin varchar(50));
 
 create table user_details(user_id int primary key,firstname varchar(50),lastname varchar(50),email varchar(50),mobileno varchar(50),address_id int references address_details(address_id),dob date);
@@ -58,6 +60,13 @@ insert into policy_payments values(367,2222,'689318','2012-6-21',20000,null);
 insert into policy_payments values(298,3333,'689320','2012-6-18',20000,null);
 
 1.Write a query to display the policytypeid,policytypename,description of all the car’s policy details.
+Ans : Query 
+
+screen shot 
+
+
+
+
 2.Write a query to display the policytypecode,no of polycies in each code with alias name NO_OF_POLICIES.
 3.Write a query to display the userid,firstname,lastname, email,mobileno who are residing in Chennai.
 4.Write a query to display the userid, firstname lastname with alias name USER_NAME,email,mobileno who has taken the car polycies.

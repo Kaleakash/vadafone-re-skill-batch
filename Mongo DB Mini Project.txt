@@ -1,3 +1,5 @@
+use testdb;
+
 Insert the following documents into a `movies` collection.
 
 ```
