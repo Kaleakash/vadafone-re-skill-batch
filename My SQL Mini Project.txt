@@ -64,9 +64,6 @@ Ans : Query
 
 screen shot 
 
-
-
-
 2.Write a query to display the policytypecode,no of polycies in each code with alias name NO_OF_POLICIES.
 3.Write a query to display the userid,firstname,lastname, email,mobileno who are residing in Chennai.
 4.Write a query to display the userid, firstname lastname with alias name USER_NAME,email,mobileno who has taken the car polycies.
